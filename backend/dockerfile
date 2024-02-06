@@ -1,0 +1,52 @@
+# FROM node:lts
+
+# COPY package*.json ./
+
+# RUN npm install
+
+# COPY . /backend/
+
+# WORKDIR /backend/
+
+# EXPOSE 3333
+# # RUN npm run build
+
+
+# CMD [ "bash","./script.sh"]
+FROM node:20
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json to the working directory
+# COPY package*.json ./
+
+# # Install app dependencies
+# RUN npm install
+# RUN npm install @prisma/cli@latest --save-dev
+
+# Copy the rest of the application code
+# COPY . .
+
+COPY .env ./.env
+
+COPY [ "package.json" , "./" ]
+
+# RUN apk add xdg-utils
+
+RUN npm install 
+
+COPY ./prisma ./prisma
+
+# CMD ["sh", "run.sh" ]
+
+# Run Prisma migrations in development mode
+# RUN npx prisma migrate dev
+
+# Expose the port that your application will run on
+EXPOSE 3333
+
+# Start the application in development mode
+# CMD [ "bash","./script.sh"]
+
+CMD ["sh", "script.sh" ]

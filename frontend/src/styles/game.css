@@ -1,0 +1,206 @@
+.Gamebackground {
+    background: linear-gradient(250deg, #5469ad 10%, #09247c 90%);
+}
+
+.PongGame .Circles {
+
+    background: linear-gradient(180deg, #213167 0%, #001047 100%);
+}
+
+.ClickToStartGame {
+
+    animation-name: ClickToStart;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    color: rgb(215, 214, 214)
+}
+
+@keyframes ClickToStart {
+    0% {
+        color: rgb(215, 214, 214)
+    }
+    
+    50% {
+        color: rgba(215, 214, 214, 0.179)
+        /* color: rgb(43, 43, 43) */
+    }
+
+    100% {
+        color: rgb(215, 214, 214)
+    }
+}
+
+.NextButton {
+
+    animation-name: NextButtonAnimation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    color: rgb(255, 225, 0)
+}
+
+@keyframes NextButtonAnimation {
+    0% {
+        color: rgb(255, 225, 0)
+            /* color: rgb(250 204 21) */
+    }
+
+    50% {
+        color: rgba(255, 225, 0, 0.324)
+    }
+
+    100% {
+        color: rgb(255, 225, 0)
+            /* color: rgb(250 204 21) */
+    }
+}
+
+.OnlineCard {
+    /* box-shadow: 1px 1px 10px 1px rgb(128, 124, 124); */
+    background: linear-gradient(109deg, #8EA0FF 2.1%, #01A 98.37%);
+}
+
+.OnlineCard #Bottom {
+
+    background: linear-gradient(10deg, #5366c8 2.1%, #01A 98.37%);
+}
+
+.MatchingCard {
+    background: linear-gradient(#313C4D, #43546D);
+}
+
+.EasyCard {
+    background: linear-gradient(#72c060, #51a648);
+}
+
+.EasyCardrevers {
+    background: linear-gradient(#51a648, #72c060);
+}
+
+.MediumCard {
+    background: linear-gradient(#f9a319, #f3851d);
+}
+
+.MediumCardrevers {
+    background: linear-gradient(#f3851d, #f9a319);
+}
+
+.HardCard {
+    background: linear-gradient(#f05454, #d5393a);
+}
+
+.HardCardrevers {
+    background: linear-gradient(#d5393a, #f05454);
+}
+
+.MatchingCard #Bottom {
+    background: linear-gradient(#313C4D, #43546D);
+}
+
+.ComputerCard {
+    background: linear-gradient(109deg, #c69d35 1.63%, #f0d575 47.63%, #e9c339 98.4%);
+    /* box-shadow: 1px 1px 10px 0.1px rgb(78, 78, 78); */
+}
+
+.ComputerCard #Bottom {
+    background: linear-gradient(109deg, #c69d35 1.63%, #d8c066 47.63%, #e9c339 98.4%);
+}
+
+.BottonsSettings {
+    background: linear-gradient(109deg, #96a4ec 2.1%, rgb(66, 84, 242) 98.37%);
+    color: white;
+    transition: background 0s;
+}
+
+.BottonsSettings:hover {
+    background: linear-gradient(109deg, #5f71cd 2.1%, rgb(48, 64, 210) 98.37%);
+}
+
+
+
+
+
+
+.GameIsReady .RightSide #content {
+    background: linear-gradient(#000000, #00005a);
+    animation-name: moveRightSide;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+
+    position: relative;
+    bottom: 80%;
+}
+
+/* .GameIsReady .RightSide #content div {
+    background: linear-gradient(#000000, #00005a );
+} */
+
+@keyframes moveRightSide {
+    0% {
+        bottom: 80%;
+    }
+
+    20% {
+        bottom: 0%;
+    }
+
+    80% {
+        bottom: 0%;
+    }
+
+    100% {
+        bottom: 80%;
+    }
+}
+
+.GameIsReady .LeftSide #content {
+    background: linear-gradient(#00005a, #000000);
+    animation-name: moveLeftSide;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    position: relative;
+    top: 80%;
+}
+
+@keyframes moveLeftSide {
+
+    0% {
+        top: 80%;
+    }
+
+    20% {
+        top: 0%;
+    }
+
+    80% {
+        top: 0%;
+    }
+
+    100% {
+        top: 80%;
+    }
+}
+
+.GameIsReady #middleIcon {
+    animation-name: rotateMiddleIcon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateMiddleIcon {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: 90deg;
+    }
+
+    100% {
+        rotate: 180deg;
+    }
+}
+
+.playAgain {
+    filter: blur(30px);
+}
